@@ -5,13 +5,14 @@ import ProductsContainer from "./containers/ProductsContainer";
 import VehiclesContainer from "./containers/VehiclesContainer";
 import CommentsContainer from "./containers/CommentsContainer";
 import CreateThingsContainer from "./containers/CreateThingsContainer";
+import { loadContacts } from "./actions/index";
 class App extends Component {
   constructor() {
     super();
     this.state = {users: []};
   }
   componentDidMount() {
-
+    loadContacts
   }
   render() {
     return (
