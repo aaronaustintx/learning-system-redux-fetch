@@ -17,17 +17,49 @@ export function loadContacts() {
       value: contacts
     };
    }
-   
+
    export function createContact(contact) {
     return function (dispatch) {
+      fetch("/contacts", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(contact)
+      }).then(() => dispatch(loadContacts()));
+    };
+   }
+   
+   
+  //  export function createContact(contact) {
+  //   return function (dispatch) {
+  //     dispatch({
+  //       type: "CREATE_CONTACT"
+  //     });
+  //     fetch("/contacts")
+  //     .then( (response) => {
+  //       return response.json();
+  //     }).then((contacts) => {
+  //       dispatch(loadContacts(contacts));
+  //     });
+  //   };
+  //  }
+
+   export function loadVehicles() {
+    return function (dispatch) {
       dispatch({
-        type: "CREATE_CONTACT"
+        type: "LOAD_VEHICLES"
       });
-      fetch("/contacts")
+      fetch("/vehicles")
       .then( (response) => {
         return response.json();
-      }).then((contacts) => {
-        dispatch(loadContacts(contacts));
+      }).then((vehicles) => {
+        dispatch(vehiclesLoaded(vehicles));
       });
+    };
+   }
+
+   export function vehiclesLoaded(vehicles) {
+    return {
+      type: "VEHICLES_LOADED",
+      value: vehicles
     };
    }

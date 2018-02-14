@@ -10,9 +10,15 @@ function contacts(state = [],action) {
   }
   return state;
  }
- 
+
+ function vehicles(state = [],action) {
+  if (action.type === "VEHICLES_LOADED") {
+    return action.value;
+  }
+  return state;
+ }
 
 const rootReducer = combineReducers({
-  comments, contacts
+  comments, contacts, vehicles
 });
 export default rootReducer;

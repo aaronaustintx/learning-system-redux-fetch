@@ -6,6 +6,7 @@ import VehiclesContainer from "./containers/VehiclesContainer";
 import CommentsContainer from "./containers/CommentsContainer";
 import CreateThingsContainer from "./containers/CreateThingsContainer";
 import {loadContacts} from "./actions/index";
+import {loadVehicles} from "./actions/index";
 import {connect} from "react-redux";
 import mapDispatchToProps from "./actions/index";
 
@@ -15,7 +16,8 @@ class App extends Component {
     this.state = {users: []};
   }
   componentDidMount() {
-    this.props.loadContacts();
+    this.props.loadContacts()
+    this.props.loadVehicles()
   }
   render() {
     return (
