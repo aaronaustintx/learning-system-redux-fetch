@@ -75,6 +75,10 @@
       "_id": 4,
       "body": "I can't wait to do the check point!",
       "postId": 1
+    },
+    {
+      "body": "HI comment",
+      "_id": 5
     }
   ],
   "profile": {

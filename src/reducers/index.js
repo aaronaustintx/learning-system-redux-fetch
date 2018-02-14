@@ -4,12 +4,12 @@ function comments(state = [], action) {
   return state;
 }
 
-// function comments(state = [],action) {
-//   if (action.type === "COMMENTS_LOADED") {
-//     return action.value;
-//   }
-//   return state;
-//  }
+function comments(state = [],action) {
+  if (action.type === "COMMENTS_LOADED") {
+    return action.value;
+  }
+  return state;
+ }
 
 
 function contacts(state = [],action) {
