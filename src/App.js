@@ -5,14 +5,17 @@ import ProductsContainer from "./containers/ProductsContainer";
 import VehiclesContainer from "./containers/VehiclesContainer";
 import CommentsContainer from "./containers/CommentsContainer";
 import CreateThingsContainer from "./containers/CreateThingsContainer";
-import { loadContacts } from "./actions/index";
+import {loadContacts} from "./actions/index";
+import {connect} from "react-redux";
+import mapDispatchToProps from "./actions/index";
+
 class App extends Component {
   constructor() {
     super();
     this.state = {users: []};
   }
   componentDidMount() {
-    loadContacts
+    this.props.loadContacts();
   }
   render() {
     return (
