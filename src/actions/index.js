@@ -91,3 +91,34 @@ export function loadContacts() {
       }).then(() => dispatch(loadProducts()));
     };
    }
+
+   export function loadComments() {
+    return function (dispatch) {
+      dispatch({
+        type: "LOAD_COMMENTS"
+      });
+      fetch("/comments")
+      .then( (response) => {
+        return response.json();
+      }).then((comments) => {
+        dispatch(commentsLoaded(comments));
+      });
+    };
+   }
+
+   export function commentsLoaded(comments) {
+    return {
+      type: "COMMENTS_LOADED",
+      value: comments
+    };
+   }
+
+   export function createComment(comment) {
+    return function (dispatch) {
+      fetch("/comments", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(comment)
+      }).then(() => dispatch(loadComments()));
+    };
+   }

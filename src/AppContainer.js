@@ -1,9 +1,10 @@
 import App from "./App";
 import "./App.css";
 import { connect } from "react-redux";
-import {loadContacts, loadProduct} from "./actions";
+import {loadContacts} from "./actions";
 import {loadVehicles} from "./actions";
 import {loadProducts} from "./actions";
+import {loadComments} from "./actions";
 
 
 function mapDispatchToProps(dispatch) {
@@ -16,7 +17,10 @@ function mapDispatchToProps(dispatch) {
       },
       loadProducts() {
         dispatch(loadProducts());
-      }
+      },
+      loadComments() {
+        dispatch(loadComments());
+        }
   };
 }
 
