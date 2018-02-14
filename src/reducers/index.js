@@ -18,7 +18,14 @@ function contacts(state = [],action) {
   return state;
  }
 
+ function products(state = [],action) {
+  if (action.type === "PRODUCTS_LOADED") {
+    return action.value;
+  }
+  return state;
+ }
+
 const rootReducer = combineReducers({
-  comments, contacts, vehicles
+  comments, contacts, vehicles, products
 });
 export default rootReducer;

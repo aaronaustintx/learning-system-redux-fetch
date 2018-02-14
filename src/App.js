@@ -7,6 +7,7 @@ import CommentsContainer from "./containers/CommentsContainer";
 import CreateThingsContainer from "./containers/CreateThingsContainer";
 import {loadContacts} from "./actions/index";
 import {loadVehicles} from "./actions/index";
+import {loadProducts} from "./actions/index";
 import {connect} from "react-redux";
 import mapDispatchToProps from "./actions/index";
 
@@ -18,6 +19,7 @@ class App extends Component {
   componentDidMount() {
     this.props.loadContacts()
     this.props.loadVehicles()
+    this.props.loadProducts()
   }
   render() {
     return (
