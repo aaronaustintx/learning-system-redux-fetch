@@ -38,7 +38,7 @@ class App extends Component {
     this.props.loadCourses()
     this.props.setSpecialText()
     this.props.setSearchText()
-    this.props.loadMyCourseList()
+    // this.props.loadMyCourseList()
   }
   render() {
     return (
@@ -49,7 +49,7 @@ class App extends Component {
           <h1>Products</h1>
           <ProductsContainer />
           <h1>Vehicles</h1>
-          <VehiclesContainer />
+          {/* <VehiclesContainer /> */}
           <h1>Comments </h1>
           <CommentsContainer />
           <h1>Courses </h1>
@@ -64,9 +64,9 @@ class App extends Component {
           <br />
           <SearchTextBoxContainer/>
           <SearchBoxContainer />
-          <CourseList 
+          {/* <CourseList 
           title="Search Results" 
-          courses={this.props.searchResults} />
+          courses={this.props.searchResults} /> */}
 
         </div>
         <div style={{float: "left", width: "49%"}}>
