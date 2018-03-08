@@ -38,7 +38,7 @@ class App extends Component {
     this.props.loadCourses()
     this.props.setSpecialText()
     this.props.setSearchText()
-    // this.props.loadMyCourseList()
+    this.props.loadMyCourseList()
   }
   render() {
     return (
