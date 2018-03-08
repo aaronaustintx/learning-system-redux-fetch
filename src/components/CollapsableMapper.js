@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { removeMyCourse } from "../actions";
 
 class CollapsableMapper extends Component {
   constructor() {
@@ -6,10 +7,10 @@ class CollapsableMapper extends Component {
     this.state = {visible: true};
   }
   render() {
-    let buttonText = "Hide";
+    let buttonText = "Reload / Hide";
     let userDivs = "";
     if (this.state.visible) {
-      buttonText = "Hide";
+      buttonText = "Reload / Hide";
       userDivs = this.props.data.map((d,i) => {
         return (
           <div key={i}>
@@ -17,11 +18,16 @@ class CollapsableMapper extends Component {
             {d[this.props.field1]} 
             {d[this.props.field2]} 
             {d[this.props.field3]}
+            {d[this.props.field4]}
+            <button onClick={() => {
+         {removeMyCourse({i})}; 
+        }
+        }>Remove </button>
           </div>
         );
       });
     } else {
-      buttonText = "Show";
+      buttonText = "Load";
       userDivs = "";
     }
     return (

@@ -79,11 +79,76 @@
     {
       "body": "HI comment",
       "_id": 5
+    },
+    {
+      "body": "comment",
+      "_id": 6
+    },
+    {
+      "body": "comment",
+      "_id": 7
     }
   ],
   "profile": {
     "name": "typicode"
   },
+  "courses": [
+    {
+      "_id": 12345,
+      "id": 12345,
+      "className": "Discrete Math",
+      "length": "3",
+      "subject": "Math"
+    },
+    {
+      "_id": 1,
+      "className": "2004",
+      "length": "HONDA",
+      "subject": "Accord"
+    },
+    {
+      "_id": "24355",
+      "id": "24355",
+      "className": "Calculus 3 Math",
+      "length": "3",
+      "subject": "Math"
+    },
+    {
+      "id": "78777",
+      "className": "",
+      "length": "4",
+      "courseName": "Requirements of Engineering",
+      "subject": "CS",
+      "_id": "BkWNhpsOG"
+    },
+    {
+      "id": "39233",
+      "className": "",
+      "hours": "",
+      "courseName": "Security ",
+      "length": "3 ",
+      "subject": "CS",
+      "_id": "r1cOHRjuM"
+    },
+    {
+      "id": "88333",
+      "className": "",
+      "hours": "",
+      "courseName": "Java ",
+      "length": "3 ",
+      "subject": "CS",
+      "_id": "HJgU8h3_G"
+    },
+    {
+      "id": "11111",
+      "className": "",
+      "hours": "",
+      "courseName": "Algebra",
+      "length": "5",
+      "subject": "Math",
+      "_id": "SkszF-6Of"
+    }
+  ],
   "vehicles": [
     {
       "_id": 1,
@@ -356,6 +421,12 @@
       "make": "GMC",
       "model": "Acadia",
       "_id": 22
+    },
+    {
+      "year": "2017",
+      "make": "GMC",
+      "model": "Yukon",
+      "_id": 23
     }
   ],
   "products": [
@@ -621,6 +692,11 @@
       "name": "macbook pro",
       "description": "laptop",
       "_id": 11
+    },
+    {
+      "name": "Course",
+      "description": "12345",
+      "_id": 12
     }
   ]
 }

@@ -4,7 +4,8 @@ import {
   createProduct,
   createVehicle,
   createContact,
-  createComment
+  createComment,
+  createCourse
 } from "../actions";
 
 function mapDispatchToProps(dispatch) {
@@ -12,14 +13,17 @@ function mapDispatchToProps(dispatch) {
     createProduct: function (product) {
       dispatch(createProduct(product));
     },
-    createVehicle: function (v) {
-      dispatch(createVehicle(v));
+    createVehicle: function (vehicle) {
+      dispatch(createVehicle(vehicle));
     },
     createContact: function (contact) {
       dispatch(createContact(contact));
     },
     createComment: function (c) {
       dispatch(createComment(c));
+    },
+    createCourse: function (e) {
+      dispatch(createCourse(e));
     },
   };
 }

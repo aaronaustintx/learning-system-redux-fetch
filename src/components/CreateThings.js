@@ -17,6 +17,11 @@ class CreateThings extends React.Component {
         make: "",
         model: ""
       },
+      course: {
+        id: "",
+        className: "",
+        hours: ""
+      },
       product: {
         name: "",
         description: ""
@@ -115,6 +120,51 @@ class CreateThings extends React.Component {
             <button>Create</button>
           </form>
         </div>
+
+        <div>
+          <h1>Add Courses</h1>
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            if (this.props.createCourse) {
+              this.props.createCourse(this.state.course);
+            }
+          }}>
+            <div>
+              id: <input onChange={(e) => {
+                const course = {id: e.target.value};
+                this.setState({
+                  course: Object.assign(this.state.course,course)
+                });
+              }} />
+            </div>
+            <div>
+              courseName: <input onChange={(e) => {
+                const course = {courseName: e.target.value};
+                this.setState({
+                  course: Object.assign(this.state.course,course)
+                });
+              }} />
+            </div>
+            <div>
+              length: <input onChange={(e) => {
+                const course = {length: e.target.value};
+                this.setState({
+                  course: Object.assign(this.state.course,course)
+                });
+              }} />
+            </div>
+            <div>
+              subject: <input onChange={(e) => {
+                const course = {subject: e.target.value};
+                this.setState({
+                  course: Object.assign(this.state.course,course)
+                });
+              }} />
+            </div>
+            <button>Add</button>
+          </form>
+        </div>
+
         <div>
           <h1>Product</h1>
           <form onSubmit={(e) => {

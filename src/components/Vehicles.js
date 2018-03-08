@@ -1,9 +1,9 @@
 import React from "react";
 import CollapsableMapper from "./CollapsableMapper";
 
-function Vehicles(props) {
+function FavoriteCourses(props) {
   return (
-    <CollapsableMapper data={props.vehicles} field="year" field1="make" field2="model"  />
+    <CollapsableMapper data={props.FavoriteCourses} field="id" field1="courseName" field2="hours"  />
   );
 }
-export default Vehicles;
+export default FavoriteCourses;

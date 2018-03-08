@@ -2,5 +2,10 @@ export default {
   contacts: [],
   comments: [],
   products: [],
-  vehicles: []
+  vehicles: [],
+  courses: [],
+  specialText: "",
+  searchText: "",
+  searchResults: [],
+  myCourseList: []
 };
