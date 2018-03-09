@@ -22,36 +22,15 @@ class CreateThings extends React.Component {
         className: "",
         hours: ""
       },
-      product: {
-        name: "",
-        description: ""
-      }
+      
     };
   }
   render() {
     return (
       <div>
+
         <div>
-          <h1>Comments</h1>
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            if (this.props.createComment) {
-              this.props.createComment(this.state.comment);
-            }
-          }}>
-            <div>
-              Body: <input onChange={(e) => {
-                const comment = {body: e.target.value};
-                this.setState({
-                  comment: Object.assign(this.state.comment,comment)
-                });
-              }} />
-            </div>
-            <button>Create</button>
-          </form>
-        </div>
-        <div>
-          <h1>Contact</h1>
+          <h1>Student</h1>
           <form onSubmit={(e) => {
             e.preventDefault();
             if (this.props.createContact) {
@@ -67,62 +46,20 @@ class CreateThings extends React.Component {
               }} />
             </div>
             <div>
-              Occupation: <input onChange={(e) => {
+              studentId: <input onChange={(e) => {
                 const contact = {occupation: e.target.value};
                 this.setState({
                   contact: Object.assign(this.state.contact,contact)
                 });
               }} />
             </div>
-            <div>
-              Avatar: <input onChange={(e) => {
-                const contact = {avatar: e.target.value};
-                this.setState({
-                  contact: Object.assign(this.state.contact,contact)
-                });
-              }} />
-            </div>
-            <button>Create</button>
-          </form>
-        </div>
-        <div>
-          <h1>Vehicle</h1>
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            if (this.props.createVehicle) {
-              this.props.createVehicle(this.state.vehicle);
-            }
-          }}>
-            <div>
-              Year: <input onChange={(e) => {
-                const vehicle = {year: e.target.value};
-                this.setState({
-                  vehicle: Object.assign(this.state.vehicle,vehicle)
-                });
-              }} />
-            </div>
-            <div>
-              Make: <input onChange={(e) => {
-                const vehicle = {make: e.target.value};
-                this.setState({
-                  vehicle: Object.assign(this.state.vehicle,vehicle)
-                });
-              }} />
-            </div>
-            <div>
-              Model: <input onChange={(e) => {
-                const vehicle = {model: e.target.value};
-                this.setState({
-                  vehicle: Object.assign(this.state.vehicle,vehicle)
-                });
-              }} />
-            </div>
-            <button>Create</button>
+
+            <button>Add</button>
           </form>
         </div>
 
         <div>
-          <h1>Add Courses</h1>
+          <h1>Add Course</h1>
           <form onSubmit={(e) => {
             e.preventDefault();
             if (this.props.createCourse) {
@@ -166,32 +103,41 @@ class CreateThings extends React.Component {
         </div>
 
         <div>
-          <h1>Product</h1>
+          <h1>Favorite Class</h1>
           <form onSubmit={(e) => {
             e.preventDefault();
-            if (this.props.createProduct) {
-              this.props.createProduct(this.state.product);
+            if (this.props.createVehicle) {
+              this.props.createVehicle(this.state.vehicle);
             }
           }}>
             <div>
-              Name: <input onChange={(e) => {
-                const product = {name: e.target.value};
+              id: <input onChange={(e) => {
+                const vehicle = {year: e.target.value};
                 this.setState({
-                  product: Object.assign(this.state.product,product)
+                  vehicle: Object.assign(this.state.vehicle,vehicle)
                 });
               }} />
             </div>
             <div>
-              Description: <input onChange={(e) => {
-                const product = {description: e.target.value};
+              courseName: <input onChange={(e) => {
+                const vehicle = {make: e.target.value};
                 this.setState({
-                  product: Object.assign(this.state.product,product)
+                  vehicle: Object.assign(this.state.vehicle,vehicle)
+                });
+              }} />
+            </div>
+            <div>
+              length: <input onChange={(e) => {
+                const vehicle = {model: e.target.value};
+                this.setState({
+                  vehicle: Object.assign(this.state.vehicle,vehicle)
                 });
               }} />
             </div>
             <button>Create</button>
           </form>
-        </div>        
+        </div>
+     
       </div>
       
     );

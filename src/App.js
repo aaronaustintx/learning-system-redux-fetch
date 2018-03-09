@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
 import ContactsContainer from "./containers/ContactsContainer";
-import ProductsContainer from "./containers/ProductsContainer";
+
 import VehiclesContainer from "./containers/VehiclesContainer";
-import CommentsContainer from "./containers/CommentsContainer";
+
 import CoursesContainer from "./containers/CoursesContainer";
 import CreateThingsContainer from "./containers/CreateThingsContainer";
 import {loadContacts} from "./actions/index";
 import {loadVehicles} from "./actions/index";
-import {loadProducts} from "./actions/index";
-import {loadComments} from "./actions/index";
 import {loadCourses} from "./actions/index";
 import {loadMyCourseList} from "./actions/index";
 import {setSpecialText} from "./actions/index";
@@ -33,8 +31,6 @@ class App extends Component {
   componentDidMount() {
     this.props.loadContacts()
     this.props.loadVehicles()
-    this.props.loadProducts()
-    this.props.loadComments()
     this.props.loadCourses()
     this.props.setSpecialText()
     this.props.setSearchText()
@@ -44,14 +40,11 @@ class App extends Component {
     return (
       <div>
         <div style={{float: "left", width: "49%"}}>
-          <h1>Contacts</h1>
+          <h1>Student</h1>
           <ContactsContainer />
-          <h1>Products</h1>
-          <ProductsContainer />
-          <h1>Vehicles</h1>
+          {/* <h1>Products</h1>
+          <ProductsContainer /> */}
           {/* <VehiclesContainer /> */}
-          <h1>Comments </h1>
-          <CommentsContainer />
           <h1>Courses </h1>
           <CoursesContainer />
           <br />
@@ -60,13 +53,13 @@ class App extends Component {
           <br />
           <SpecialText />
           {/* <SpecialTextContainer /> */}
-        
+          <CoursesContainer />
           <br />
           <SearchTextBoxContainer/>
           <SearchBoxContainer />
-          {/* <CourseList 
+          <CourseList 
           title="Search Results" 
-          courses={this.props.searchResults} /> */}
+          courses={this.props.searchResults} />
 
         </div>
         <div style={{float: "left", width: "49%"}}>

@@ -1,12 +1,6 @@
 import {combineReducers} from "redux";
 
 
-function comments(state = [],action) {
-  if (action.type === "COMMENTS_LOADED") {
-    return action.value;
-  }
-  return state;
- }
 
 
 function contacts(state = [],action) {
@@ -23,12 +17,7 @@ function contacts(state = [],action) {
   return state;
  }
 
- function products(state = [],action) {
-  if (action.type === "PRODUCTS_LOADED") {
-    return action.value;
-  }
-  return state;
- }
+
 
  function courses(state = [],action) {
   if (action.type === "COURSES_LOADED") {
@@ -70,6 +59,6 @@ function searchResults(state = [],action) {
 
 
 const rootReducer = combineReducers({
-  comments, contacts, vehicles, products, courses, specialText, searchText, searchResults, myCourseList
+  contacts, vehicles, courses, specialText, searchText, searchResults, myCourseList
 });
 export default rootReducer;

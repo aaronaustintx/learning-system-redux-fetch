@@ -8,15 +8,15 @@ class ListToggle extends Component {
     this.state = { toggled: props.course ? Boolean(props.course._id) : false};
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick() {
-    if (this.state.toggled === true) {
-      this.props.removeMyCourse(this.props.course._id);
-      this.setState({ toggled: false });
-    } else {
-      this.props.saveMyMovie(this.props.course);
-      this.setState({ toggled: true }); 
-    }
-  }
+  // handleClick() {
+  //   if (this.state.toggled === true) {
+  //     this.props.removeMyCourse(this.props.course._id);
+  //     this.setState({ toggled: false });
+  //   } else {
+  //     this.props.saveMyMovie(this.props.course);
+  //     this.setState({ toggled: true }); 
+  //   }
+  // }
   
   render() {
     return (

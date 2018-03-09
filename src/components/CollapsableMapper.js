@@ -1,5 +1,6 @@
 import React, { Component } from "react";
- import { removeMyCourse } from "../actions";
+// import { removeMyCourse } from "../actions";
+// import {removeMyCourse} from "../containers/CollapsableMapperContainer";
 
 class CollapsableMapper extends Component {
   constructor() {
@@ -20,9 +21,15 @@ class CollapsableMapper extends Component {
             {d[this.props.field3]}
             {d[this.props.field4]}
             <button onClick={() => {
-        { removeMyCourse(d[i])}
+              
+        //  this.props.removeMyCourse(d)
+        {this.props.mapDispatchToProps.removeCourse(i)}
         }
         }>Remove </button>
+         <button onClick={() => {
+       
+        }
+        }>Edit </button>
           </div>
         );
       });
