@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { removeMyCourse } from "../actions";
+ import { removeMyCourse } from "../actions";
 
 class CollapsableMapper extends Component {
   constructor() {
@@ -20,7 +20,7 @@ class CollapsableMapper extends Component {
             {d[this.props.field3]}
             {d[this.props.field4]}
             <button onClick={() => {
-        //  {removeMyCourse({i})}; 
+        { removeMyCourse(d[i])}
         }
         }>Remove </button>
           </div>
